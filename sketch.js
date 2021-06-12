@@ -7,7 +7,7 @@ var engine, world;
 var block1, block2, block3, block4, block5, block6, block7, block8, block9;
 var block10,block11,block12, block13, block14;
 var player;
-var ground1, ground2, ground3;
+var ground1, stand1, stand2 ;
 
 var block15, block16, block17, block18, block19, block20, block21;
 var block22;
@@ -50,9 +50,9 @@ function setup() {
 
   block13 = new Block(600,140,30,40);
 
-  ground1 = new Ground(700,285,20,10);
-  ground2 = new Ground(900,195,200,10);
-  ground3 = new Ground(750, 600, 1500, 10)
+  ground1 = new Ground;
+  stand1 = new Stand(900,195,200,10);
+  stand2 = new Stand(750, 600, 1500, 10)
 
 
   block14 = new Block(900,170,30,40);
@@ -77,10 +77,10 @@ function setup() {
 }
 
 function draw() {
-  background("grey");
+  background("white");
   Engine.update(engine);
 
-  fill(rgb(135, 205, 236));
+ // fill(rgb(135, 205, 236));
 
   block1.display();
   block2.display();
@@ -118,8 +118,8 @@ function draw() {
   block22.display();
 
   ground1.display();
-  ground2.display();
-  ground3.display();
+  stand1.display();
+  stand2.display();
 
   imageMode(CENTER);
   image(img,ball.position.x,ball.position.y,40,40);
